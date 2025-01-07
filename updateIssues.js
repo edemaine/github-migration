@@ -47,7 +47,7 @@ const updateBranch = async (issue) => {
   const url = `${api}/issues/${issue.number}`
   const body = {
     state: issue.state,
-    labels: (issue.labels || []).concat(['Github Import'])
+    //labels: (issue.labels || []).concat(['Github Import'])
   }
   await patch(url, body)
     .then(response => {
